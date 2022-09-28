@@ -1,0 +1,32 @@
+DB = -g
+CXX = g++
+CFDEBUG	= -Wall
+LIBS_1 = -lpthread
+LIBS_2 = -lvlc
+PATH_L1 = -L/usr/lib/x86_64-linux-gnu 
+CFLAGS = -o
+CFONE = -c
+TARGET = multithread_server
+RM = rm -rf
+
+all:	multithread_server
+multithread_server:	multithread_server.o
+	echo "Compilation of object with only g++ -c that generates object file!"
+	echo "Linking is only done with gcc -o after compilation! "
+	$(CXX) multithread_server.o $(CFLAGS) multithread_server $(LIBS_1) $(LIBS_2)
+	
+
+multithread_server.o:	multithread_server.cpp
+
+	echo "Create Object File with g++ -o in conjunction with -c"
+	$(CXX) $(CFONE) multithread_server.cpp $(CFLAGS) multithread_server.o
+       
+
+clean:
+	echo "MultiThread Client Server - Makefile" 
+	$(RM) *.o multithread_server
+	
+
+
+
+
