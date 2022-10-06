@@ -1,0 +1,17 @@
+Note :
+check  ssh server is installed or not:
+if not installed, install it (this has to be dones on server side)
+    $sudo apt install ssh-server :
+also check the client side if the ssh client is installed! if Not installed, install as follow:
+  $sudo apt install ssh-client
+After installation of ssh-server , CHECK ssh server status if running or not:
+  $ ssh service status
+  if you see does not work , restart i
+  $ sudo service ssh restart
+
+ssh -Y' Enables trusted X11 forwarding. Trusted X11 forwardings are not subjected to the X11 SECURITY extension controls.
+to enable  X11 forwarding:
+ $vi cat /etc/ssh/sshd_config 
+    change X11Forwarding no to X11Forwarding yes 
+$ ssh -Y root@192.168.12.64
+
