@@ -1,5 +1,8 @@
 #include <stdio.h>
-#include "static_method_2.c"
+//#include "static_method_2.c"
+
+
+int z = 12;
 
 static void fikrat();
 
@@ -11,17 +14,20 @@ int main(){
 
 //    test_2();
 //
-    projetStaticMethod();
-
+    //projetStaticMethod();
+     
 }
 
 
 void test_f(){
-
+   
     int b = 2;
+    
     b++;
+    
     fprintf(stdout, "Test 3 %d\n", b);
 
+    z--;
 }
 
 static void test_1(){

@@ -1,0 +1,43 @@
+/*
+ * pointerStruct.c
+ *
+ *  Created on: Oct 10, 2022
+ *      Author: fikrat
+ */
+
+
+
+struct MyModel{
+
+	uint32_t carNum;
+	uint32_t carPrice;
+	uint16_t carMaxSpeed;
+	float carWeight;
+
+};
+
+
+void structPointer(struct MyModel *pStruct);
+
+
+
+
+int main(){
+
+	struct MyModel data;
+
+	structPointer(&data)
+
+
+
+
+}
+
+void structPointer(struct MyModel *pStruct){
+
+	//Access Variables with Derefenceing
+
+	fprintf(stdout, "Car Max %d\n", pStruct->carMaxSpeed);
+	fprintf(stdout, "Car Max %d\n", pStruct->carNum);
+
+}

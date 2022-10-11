@@ -1,0 +1,47 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 7, 2022
+ *      Author: fikrat
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+// Memory Is not consumed!
+struct CarModel{
+
+	uint32_t carNum;
+	uint32_t carPrice;
+	uint16_t carMaxSpeed;
+	float carWeight;
+
+};
+
+
+
+
+int main(void){
+
+
+    struct CarModel CarBMW = {2021, 15000, 220, 1330};
+
+    struct CarModel CarFiat = {2019, 13000, 110, 1240};
+
+
+    printf("Details of BMW is as follows\n");
+
+    printf("carNumber = %u\n",CarBMW.carNum);
+
+    printf("carNumber = %u\n",CarBMW.carPrice);
+
+    printf("carNumber = %u\n",CarBMW.carMaxSpeed);
+
+    printf("carNumber = %f\n",CarBMW.carWeight);
+
+
+    return 0;
+
+
+
+}

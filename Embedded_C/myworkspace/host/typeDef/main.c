@@ -1,0 +1,23 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 10, 2022
+ *      Author: fikrat
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+typedef struct{
+
+	uint32_t carNum;
+	uint32_t carPrice;
+	uint16_t carMaxSpeed;
+	float carWeight;
+} carModel_t;
+
+carModel_t BMW, Ford;
+
+int main(void){
+    printf("carNumber = %u\n",BMW.carNum);
+}

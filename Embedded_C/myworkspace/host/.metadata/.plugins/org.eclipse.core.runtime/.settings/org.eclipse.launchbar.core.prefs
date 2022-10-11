@@ -1,0 +1,8 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:structPro,org.eclipse.launchbar.core.descriptorType.default\:pointerStruct
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:pointerStruct/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:structPro/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:structPro/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

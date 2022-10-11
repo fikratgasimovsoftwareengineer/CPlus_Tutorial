@@ -1,0 +1,53 @@
+
+#include <stdint.h>
+
+#if !defined(__SOFT_FP__) && defined(__ARM_FP)
+  #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+#endif
+
+int main(void)
+{
+	// Pointer for Register CLock
+	uint32_t *pClockCtrReg = (uint32_t*) 0x40023830;
+
+	//GPIO Mode Register
+	uint32_t *pPortModeReg = (uint32_t*) 0x40020C00;
+
+	// GPIO Output Data Register to write
+	uint32_t *pOutDataReg = (uint32_t*) 0x40020C14;
+
+	//1. Enable clock for GPIO
+	// store temp val;
+	uint32_t temp = *pClockCtrReg; //read operation and AND operation
+	temp = temp | ( 1 << 3 ); // mask Created according to OR to set to 1
+	*pClockCtrReg = temp;
+	//======================================
+
+	// A. Configure Mode of GPIO Pin as output
+	//First Clear 24th and 25th position
+	 uint32_t temp_2 = *pPortModeReg;
+
+	 // Mask of GPIO Mode Register
+	 temp_2 = temp_2 & ~(3 << 24);
+
+	 //Set to ) First
+	 *pPortModeReg = temp_2;
+	 //=================================
+
+	 // B. Set 25th to 0 and 24th of bits to 1
+	 uint32_t temp_3 = *pPortModeReg;
+	 temp_3 = temp_3 | (1 << 24);
+	 *pPortModeReg = temp_3;
+
+	 // GPIO port Output Data Register
+
+	 uint32_t temp_4 = *pOutDataReg;
+	 temp_4 = temp_4 | (1 << 12);
+
+	 *pOutDataReg = temp_4;
+
+
+	printf("Hello World From MICROController: \n");
+    /* Loop forever */
+	for(;;);
+}

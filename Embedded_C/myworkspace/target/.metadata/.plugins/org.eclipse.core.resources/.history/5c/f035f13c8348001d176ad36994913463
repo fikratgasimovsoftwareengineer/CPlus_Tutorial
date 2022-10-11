@@ -1,0 +1,44 @@
+/*
+ * main.h
+ *
+ *  Created on: Oct 10, 2022
+ *      Author: fikrat
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+
+
+
+// Register Enable
+
+typedef struct {
+
+
+
+
+}RCC_AHB1ENR_t;
+
+
+// Register Enable
+
+typedef struct {
+
+
+
+
+}GPIOx_MODE_t;
+
+// Register Enable
+
+typedef struct {
+
+
+
+
+}GPIOx_ODR_t;
+
+
+
+#endif /* MAIN_H_ */
