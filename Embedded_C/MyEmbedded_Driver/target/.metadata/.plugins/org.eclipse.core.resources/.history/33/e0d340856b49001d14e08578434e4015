@@ -1,0 +1,12 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 11, 2022
+ *      Author: fikrat
+ */
+
+
+
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>

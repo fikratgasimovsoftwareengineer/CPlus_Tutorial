@@ -2251,3 +2251,10 @@
 2022-10-10 11:45:38,922 [INFO] ApiDb:443 - Save user favorites file /home/fikrat/.stm32cubeide/favorites.mcus.txt: 1 item(s)
 2022-10-10 11:45:38,923 [INFO] ApiDb:447 - User favorites MCUs=[STM32F407VGT6]
 2022-10-10 16:38:26,404 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-10-11 14:44:26,428 [INFO] Activator:177 - 
+
+
+2022-10-11 14:44:26,429 [INFO] Activator:178 - !SESSION log4j initialized
+2022-10-11 14:44:54,248 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-10-11 14:44:54,249 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-10-11 14:44:54,249 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

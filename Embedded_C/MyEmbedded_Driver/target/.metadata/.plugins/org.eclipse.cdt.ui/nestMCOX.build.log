@@ -1,0 +1,10 @@
+16:08:00 **** Incremental Build of configuration Debug for project nestMCOX ****
+make -j8 all 
+arm-none-eabi-size   nestMCOX.elf 
+   text	   data	    bss	    dec	    hex	filename
+    792	      8	   1568	   2368	    940	nestMCOX.elf
+Finished building: default.size.stdout
+ 
+
+16:08:00 Build Finished. 0 errors, 0 warnings. (took 175ms)
+
