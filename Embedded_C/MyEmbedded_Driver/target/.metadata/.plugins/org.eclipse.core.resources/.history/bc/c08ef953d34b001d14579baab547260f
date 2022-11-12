@@ -1,0 +1,13 @@
+/*
+ * stm32407vgt6.h
+ *
+ *  Created on: Oct 14, 2022
+ *      Author: fikrat
+ */
+
+#ifndef INC_STM32407VGT6_H_
+#define INC_STM32407VGT6_H_
+
+
+
+#endif /* INC_STM32407VGT6_H_ */

@@ -1,0 +1,46 @@
+/*
+ * button_interrupt.c
+ *
+ *  Created on: Oct 24, 2022
+ *      Author: fikrat
+ */
+
+
+
+#include "stm32F407xx.h"
+
+
+int main(void){
+
+	GPIO_Handle_t gpioLed;
+
+	gpioLed.pGPIOx = GPIOD;
+	gpioLed.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_12;
+	gpioLed.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
+	gpioLed.GPIO_PinConfig.GPIO_PinSpeed = V_HIGH_SPEED;
+	gpioLed.GPIO_PinConfig.GPIO_ODPType = GPIO_OUPUSHPULL;
+	gpioLed.GPIO_PinConfig.GPIO_PinPuPdControl = NO_PUL_DOWN;
+
+
+
+
+	GPIO_Init(&Gpio_Led);
+
+
+	// Button LED CONFIGURATION!
+
+	GPIO_BUTTON.pGPIOx = GPIOA;
+	GPIO_BUTTON.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_0;
+	GPIO_BUTTON.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_IN;
+	GPIO_BUTTON.GPIO_PinConfig.GPIO_PinSpeed = V_HIGH_SPEED;
+	GPIO_BUTTON.GPIO_PinConfig.GPIO_PinPuPdControl = NO_PUL_DOWN;
+
+	GPIO_PeriClockControl(GPIOA, ENABLE);
+
+
+	GPIO_Init(&GPIO_BUTTON);
+
+
+	return 0;
+}
+

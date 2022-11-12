@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="IRQNumber"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="IRQNumber"/>
+			<item value="GPIO_Handle_t"/>
+			<item value="APB2ENR"/>
+			<item value="RCC"/>
+			<item value="GPIO_RefDef_t"/>
+			<item value="GPIO_RefDef_t*"/>
+			<item value="AHB1ENR"/>
+			<item value="SPI4_BASE_ADDR"/>
+			<item value="SPI1_BASE_ADDR"/>
+			<item value="SPI_RegDef_t"/>
+			<item value="NVIC_BASE_ADDR"/>
+			<item value="GPIO_BASEADDR_TOCODE"/>
+			<item value="GPIO_PRIORITY"/>
+			<item value="delay"/>
+			<item value="exti"/>
+		</list>
+		<list key="replacehistory">
+			<item value="GPIOA"/>
+			<item value="GPIO_BUTTON"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1247"/>
+		<item key="DIALOG_Y_ORIGIN" value="146"/>
+		<item key="DIALOG_WIDTH" value="363"/>
+		<item key="DIALOG_HEIGHT" value="437"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="650"/>
+		<item key="DIALOG_Y_ORIGIN" value="379"/>
+	</section>
+</section>

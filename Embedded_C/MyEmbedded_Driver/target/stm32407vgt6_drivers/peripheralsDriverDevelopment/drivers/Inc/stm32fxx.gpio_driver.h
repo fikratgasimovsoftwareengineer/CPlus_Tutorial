@@ -10,7 +10,7 @@
 
 #include "stm32F407xx.h"
 
-
+#include <string.h>
 
 /*GPIO CONFIGURATION STRUCTURE*/
 
@@ -135,7 +135,7 @@ void GPIO_IRQConfig(uint8_t IRQNumber,uint8_t EnorDi);
 
 void GPIO_INTERRUPT_Handling(uint8_t PinNumber);
 
-void GPIO_PRIORITY(uint8_t IRQNumber, uint8_t IRQPriority);
+void GPIO_PRIORITY(uint8_t IRQNumber, uint32_t IRQPriority);
 
 
 uint8_t GPIO_BASEADDR_TOCODE(GPIO_RefDef_t *pGPIOx);

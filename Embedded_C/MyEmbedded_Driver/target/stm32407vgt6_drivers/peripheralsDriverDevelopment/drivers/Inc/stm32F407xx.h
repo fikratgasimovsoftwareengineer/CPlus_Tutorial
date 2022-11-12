@@ -49,7 +49,7 @@
 
 /**********NESTED VECTOR TABLE-INTERRUPT PRIORITY REGISTER*****************/
 
-#define NVIC_BASE_ADDR						( (__vo uint32_t*) 0xE000E400U )
+#define NVIC_BASE_ADDR						( (__vo uint32_t*) 0xE000E400)
 
 //**********************INTERRUPT CLEAR ENABLE REGISTER************************************************
 #define NVIC_ICER0 							((__vo uint32_t*)0xE000E180)
@@ -70,9 +70,13 @@
 #define GPIOG_BASE_ADDR							(AHB1PERIPH_BASE + 0x1800)
 #define GPIOH_BASE_ADDR							(AHB1PERIPH_BASE + 0x1C00)
 #define GPIOI_BASE_ADDR							(AHB1PERIPH_BASE + 0x2000)
+
+
 /*=================RCC  Base Address ===========================*/
 #define RCC_BASE_ADDR						    (AHB1PERIPH_BASE + 0x3800)
 //==================================================================
+
+
 
 
 /*Bus Address of Peripherals which are hanging on APB 1 BUS*/
@@ -80,20 +84,22 @@
 #define	I2C2_BASE_ADDR									(APB1PERIPH_BASE + 0x5800)
 #define	I2C3_BASE_ADDR									(APB1PERIPH_BASE + 0x5C00)
 
-#define	SPI2_BASE_ADDR									(APB1PERIPH_BASE + 0x3800)
-#define SPI3_BASE_ADDR									(APB1PERIPH_BASE + 0x3C00)
 
 #define USART2_BASE_ADDR								(APB1PERIPH_BASE + 0x4400)
 #define USART3_BASE_ADDR								(APB1PERIPH_BASE + 0x4800)
-#define UART4_BASE_ADDR									(APB1PERIPH_BASE+ 0x4C00)
-#define UART5_BASE_ADDR									(APB1PERIPH_BASE+ 0x5000)
+#define UART4_BASE_ADDR									(APB1PERIPH_BASE + 0x4C00)
+#define UART5_BASE_ADDR									(APB1PERIPH_BASE + 0x5000)
 //================================================================
 
-
+//==================== SPI BASE ADDRESS ==================
+#define SPI1_BASE_ADDR								    (APB2PERIPH_BASE + 0x3000)
+#define	SPI2_BASE_ADDR									(APB1PERIPH_BASE + 0x3800)
+#define SPI3_BASE_ADDR									(APB1PERIPH_BASE + 0x3C00)
+#define SPI4_BASE_ADDR 									(APB2PERIPH_BASE + 0x3400)
 
 
 /*Bus Address of Peripherals which are hanging on APB 2 BUS*/
-#define SPI1_BASE_ADDR								   (APB2PERIPH_BASE + 0X3000)
+
 #define USART1_BASE_ADDR							   (APB2PERIPH_BASE + 0x1000)
 #define USART6_BASE_ADDR							   (APB2PERIPH_BASE + 0x1400)
 #define EXTI_BASE_ADDR								   (APB2PERIPH_BASE + 0x3C00)
@@ -112,11 +118,11 @@
 typedef struct{
 
 	__vo uint32_t MODER;					// 0x00
-	__vo uint32_t OTYPER; 				// 0x04
-	__vo uint32_t OSPEEDR; 				// 0x08
-	__vo uint32_t PUPDR; 				// 0x0C
-	__vo uint32_t IDR;   				// 0x10
-	__vo uint32_t ODR; 					// 0x14
+	__vo uint32_t OTYPER; 					// 0x04
+	__vo uint32_t OSPEEDR; 					// 0x08
+	__vo uint32_t PUPDR; 					// 0x0C
+	__vo uint32_t IDR;   					// 0x10
+	__vo uint32_t ODR; 						// 0x14
 	__vo uint32_t BSRR; 					// 0x18
 	__vo uint32_t LCKR; 					// 0x1C
 	__vo uint32_t AFR[2]; 					// 0x20		OR	// 0x24
@@ -213,11 +219,11 @@ typedef struct{
 //===================================================
 
 /*
- * peripheral register definition structure for SPI
+ * peripheral register definition structure for SPI SPI register map MODE
  */
 typedef struct
 {
-	__vo uint32_t CR1;        /*!< TODO,     										Address offset: 0x00 */
+	__vo uint32_t CR1;        /*!< TODO,     	 									Address offset: 0x00 */
 	__vo uint32_t CR2;        /*!< TODO,     										Address offset: 0x04 */
 	__vo uint32_t SR;         /*!< TODO,     										Address offset: 0x08 */
 	__vo uint32_t DR;         /*!< TODO,     										Address offset: 0x0C */
@@ -308,7 +314,7 @@ typedef struct{
 #define SPI1				((SPI_RegDef_t*) SPI1_BASE_ADDR )
 #define	SP2					((SPI_RegDef_t*) SPI2_BASE_ADDR )
 #define SP3					((SPI_RegDef_t*) SPI3_BASE_ADDR )
-
+#define SPI4				((SPI_RegDef_t*) SPI4_BASE_ADDR )
 
 //================================================
 
@@ -347,9 +353,13 @@ typedef struct{
 #define I2C2_PCLK_EN()			(RCC->APB1ENR  |= ( 1 << 22) )
 #define I2C3_PCLK_EN()			(RCC->APB1ENR  |= ( 1 << 23) )
 
-
+// SPI CLOCK ENABLE
+#define SP1_PCLK_EN()			(RCC->APB2ENR |= ( 1 << 12) )
 #define SP2_PCLK_EN()			(RCC->APB1ENR |= ( 1 << 14) )
 #define SP3_PCLK_EN()			(RCC->APB1ENR |= ( 1 << 15) )
+#define SP4_PCLK_EN()			(RCC->APB2ENR |= ( 1 << 13) )
+
+
 
 #define USART2_PCLK_EN()		(RCC->APB1ENR |= ( 1 << 17) )
 #define USART3_PCLK_EN()		(RCC->APB1ENR |= ( 1 << 18) )
@@ -359,7 +369,7 @@ typedef struct{
 //=====================================================================
 
 /*===============CLOCK ENABLE FOR  PERIPHERALS BUS APB2ENR============*/
-#define SP1_PCLK_EN()			(RCC->APB2ENR |= (1 << 12))
+
 #define USART1_PCLK_EN()		(RCC->APB2ENR |= (1 << 4))
 #define USART6_PCLK_EN()		(RCC->APB2ENR |= (1 << 5))
 #define SYSCFG_PCLK_EN()		(RCC->APB2ENR |= (1 << 14))
@@ -411,6 +421,38 @@ typedef struct{
 #define USART1_RESET_EN()		(RCC->APB2ENR &= ~(0 << 4))
 #define USART6_RESET_EN()		(RCC->APB2ENR &= ~(0 << 5))
 #define SYSCFG_RESET_EN()		(RCC->APB2ENR &= ~(0 << 14))*/
+
+
+
+/* 		IRQ INTERRUPT REQUESTED NUMBER FOR STM32407VGT6
+ *
+ * 		REFERENCES: . Vector table for STM32F405xx/07xx and STM32F415xx/17xx (continued)
+ * */
+
+#define IRQ_NO_EXTI_0			6
+#define IRQ_NO_EXTI_1			7
+#define IRQ_NO_EXTI_2			8
+#define IRQ_NO_EXTI_3			9
+#define IRQ_NO_EXTI_4			10
+#define IRQ_NO_EXTI_5_9			23
+#define IRQ_NO_EXTI_10_15		40
+
+/*NVIC IRQ PRIORITY NUMBERS MACROS*/
+
+#define NVIC_IRQ_PRI_0			0
+#define NVIC_IRQ_PRI_15			15
+
+
+/**/
+
+/* 		IRQ INTERRUPT REQUESTED NUMBER FOR STM32407VGT6 SPI
+ *
+ * 		REFERENCES: . Vector table for STM32F405xx/07xx and STM32F415xx/17xx (continued)
+ * */
+
+#define IRQ_SPI_1				35
+#define IRQ_SPI_2				36
+#define IRQ_SPI_3				51
 
 
 

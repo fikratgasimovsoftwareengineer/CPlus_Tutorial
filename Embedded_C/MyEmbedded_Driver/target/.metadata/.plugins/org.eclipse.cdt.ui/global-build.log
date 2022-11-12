@@ -1,28 +1,19 @@
-16:06:45 **** Incremental Build of configuration Debug for project nestMCOX ****
+17:45:53 **** Incremental Build of configuration Debug for project stm32407vgt6_drivers ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "nestMCOX.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/nestMCOX/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="nestMCOX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: nestMCOX.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/Inc" -I"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/Inc" -I"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/Inc" -I"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:24:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   24 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "stm32407vgt6_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32407vgt6_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32407vgt6_drivers.elf
  
-arm-none-eabi-size   nestMCOX.elf 
-arm-none-eabi-objdump -h -S  nestMCOX.elf  > "nestMCOX.list"
+arm-none-eabi-size   stm32407vgt6_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32407vgt6_drivers.elf  > "stm32407vgt6_drivers.list"
    text	   data	    bss	    dec	    hex	filename
-    792	      8	   1568	   2368	    940	nestMCOX.elf
+    676	      8	   1568	   2252	    8cc	stm32407vgt6_drivers.elf
 Finished building: default.size.stdout
  
-Finished building: nestMCOX.list
- 
-16:07:22 **** Incremental Build of configuration Debug for project nestMCOX ****
-make -j8 all 
-arm-none-eabi-size   nestMCOX.elf 
-   text	   data	    bss	    dec	    hex	filename
-    792	      8	   1568	   2368	    940	nestMCOX.elf
-Finished building: default.size.stdout
- 
-16:08:00 **** Incremental Build of configuration Debug for project nestMCOX ****
-make -j8 all 
-arm-none-eabi-size   nestMCOX.elf 
-   text	   data	    bss	    dec	    hex	filename
-    792	      8	   1568	   2368	    940	nestMCOX.elf
-Finished building: default.size.stdout
+Finished building: stm32407vgt6_drivers.list
  

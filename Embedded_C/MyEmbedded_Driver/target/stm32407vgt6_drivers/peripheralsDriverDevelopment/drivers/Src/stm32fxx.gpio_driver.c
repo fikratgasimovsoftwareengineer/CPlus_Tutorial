@@ -501,7 +501,7 @@ void GPIO_IRQConfig(uint8_t IRQNumber, uint8_t EnorDi){
 
 
 
-void GPIO_PRIORITY(uint8_t IRQNumber, uint8_t IRQPriority){
+void GPIO_PRIORITY(uint8_t IRQNumber, uint32_t IRQPriority){
 
 	// find out  interrupt priority register number
 	uint8_t iprx = IRQNumber / 4;
@@ -509,12 +509,14 @@ void GPIO_PRIORITY(uint8_t IRQNumber, uint8_t IRQPriority){
 	uint8_t iprx_sect = IRQNumber % 4;
 
 	// Shift amount
-	uint8_t shift_amount =  (( iprx_sect * 8) + (8 - NO_USED_BITS));
+	uint8_t shift_amount =  ( iprx_sect * 8) + (8 - NO_USED_BITS);
 
 	// increase up to interrupt priority number *(NVIC_BASE_ADDR + irq_ipr)
 	//
 	// ipr_sect * 8 find out startting bits of sections ( ipr_sect* 8)
-	*(NVIC_BASE_ADDR + (iprx + 4)) |= (IRQPriority << shift_amount);
+	*(NVIC_BASE_ADDR + iprx) |= (IRQPriority << shift_amount);
+
+
 
 
 }

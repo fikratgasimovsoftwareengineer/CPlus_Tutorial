@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;stm32407vgt6_drivers/drivers/Inc/stm32407vgt6.h&apos;" deleteContents="false" description="Delete resource &apos;stm32407vgt6_drivers/drivers/Inc/stm32407vgt6.h&apos;" element1="/stm32407vgt6_drivers/drivers/Inc/stm32407vgt6.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1665760653746"/>
+</session>

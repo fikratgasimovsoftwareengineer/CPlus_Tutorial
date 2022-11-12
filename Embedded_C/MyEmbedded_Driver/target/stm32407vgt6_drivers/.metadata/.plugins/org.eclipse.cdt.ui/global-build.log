@@ -1,0 +1,19 @@
+18:28:15 **** Incremental Build of configuration Debug for project peripheralsDriverDevelopment ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/button_interrupt.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/peripheralsDriverDevelopment/drivers/Src" -I"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/peripheralsDriverDevelopment/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/button_interrupt.d" -MT"Src/button_interrupt.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/button_interrupt.o"
+In file included from ../Src/button_interrupt.c:11:
+/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/peripheralsDriverDevelopment/drivers/Src/stm32fxx.gpio_driver.c: In function 'GPIO_BASEADDR_TOCODE':
+/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/peripheralsDriverDevelopment/drivers/Src/stm32fxx.gpio_driver.c:608:1: warning: control reaches end of non-void function [-Wreturn-type]
+  608 | }
+      | ^
+arm-none-eabi-gcc -o "peripheralsDriverDevelopment.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/fikrat/CPlus_Tutorial/Embedded_C/MyEmbedded_Driver/target/stm32407vgt6_drivers/peripheralsDriverDevelopment/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="peripheralsDriverDevelopment.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: peripheralsDriverDevelopment.elf
+ 
+arm-none-eabi-size   peripheralsDriverDevelopment.elf 
+arm-none-eabi-objdump -h -S  peripheralsDriverDevelopment.elf  > "peripheralsDriverDevelopment.list"
+   text	   data	    bss	    dec	    hex	filename
+   2448	      8	   1568	   4024	    fb8	peripheralsDriverDevelopment.elf
+Finished building: default.size.stdout
+ 
+Finished building: peripheralsDriverDevelopment.list
+ 
