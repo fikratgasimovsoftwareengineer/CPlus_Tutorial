@@ -27,7 +27,7 @@ void* Person::getResult(){
 }
 
 int main(){
- 
+ // manage single object
  std::unique_ptr <Person> person(new Person(27, "Unique Pointers"));
 
  

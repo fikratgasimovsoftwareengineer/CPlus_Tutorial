@@ -32,6 +32,7 @@ class Design{
 
 
 
+
 class Car_BMW:public Design{
 
 
@@ -47,12 +48,14 @@ class Car_BMW:public Design{
 int main(){
 
     Car_BMW car;
+    Design* ptr;
+    ptr = &car;
 
-    car.setWidth(4);
-    car.setHeight(5);
+    ptr->setWidth(4);
+    ptr->setHeight(5);
 
 
-    cout << car.getVolume() << endl;
+    cout << ptr->getVolume() << endl;
 
     return 0;
 

@@ -27,8 +27,6 @@ int main(){
  //void (*func) (int);
  //func = &my_int_func;
  //func(4);
- 
-
 
 
  int* c;
