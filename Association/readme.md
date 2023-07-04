@@ -1,2 +1,2 @@
-# Associtation of CPlUS CPLUS]
-<img src="/home/fikrat/CPlus_Tutorial/Association/uml.png" width="400"/>
+# Associtation of CPlUS CPLUS
+<img src="uml.png" width="300"/>
