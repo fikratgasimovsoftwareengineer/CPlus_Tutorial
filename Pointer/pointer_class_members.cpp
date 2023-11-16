@@ -6,12 +6,17 @@ class MyClass{
 
 
     public:
+
 	    MyClass();
+
 	    ~MyClass();
+
 	    int getAge(){return *itsAge;}
+
 	    int getWeight(){return *itsWeight;}
 
 	    void setAge(int age){*itsAge = age;}
+        
 	    void setWeight(int weight){*itsWeight=weight;}
 
     private:
